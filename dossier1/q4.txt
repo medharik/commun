@@ -1,4 +1,4 @@
-select libelle, to_char(date_m, 'day month  yyyy',NLS_DATE_LANGUAGE='DANISH')
+select libelle,poids,  to_char(date_m, 'day month  yyyy',NLS_DATE_LANGUAGE='DANISH'), 
 from debris
 where 
 idcontrat not in (

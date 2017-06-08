@@ -1,0 +1,7 @@
+select idassureur from
+
+assureur  , contartA
+
+where assureur.idassureur=contartA.idassureur
+and 
+date_contrat < '01-01-2011'

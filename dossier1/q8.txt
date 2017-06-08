@@ -1,0 +1,10 @@
+select nom_c from consortium 
+
+where idconortium in (
+select idconR  from debris 
+where 
+date_m -sysdate <= 90
+group by  idconr 
+having count(*) >=3 
+
+)

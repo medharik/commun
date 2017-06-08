@@ -1,0 +1,11 @@
+select libelle 
+from debris  , couche 
+where debris.idcouche=couche.idcouche
+and nom_couche='mésosphère'
+and taille >25 
+and idcontrat in (
+select idcontrat from contratA
+where date_contrat
+between '01-01-2007' and  '31-12-2017'
+
+)

@@ -1,0 +1,8 @@
+select nom_c from couche , debris 
+where couche.idcouche=debris.idcouche
+group by nom_c
+having count(*) >= all(
+select count(*) from couche , debris 
+where couche.idcouche=debris.idcouche
+group by nom_c
+)

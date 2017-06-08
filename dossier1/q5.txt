@@ -1,0 +1,33 @@
+select nom_c from consortium 
+where idconsortium not in (
+select idconP from debris , couche , assureur, contartA  
+where
+debris.idcouche=couche.idcouche
+and 
+debris.idcontrat=contartA.idcontrat
+and 
+assureur.idassureur=constratA.idssureur
+and 
+nom_couche='stratoshpère'
+and 
+nom_assur <> 'LLIYOD'
+
+
+)
+
+and 
+idconsortium not in (
+select idconR from debris , couche , assureur, contartA  
+where
+debris.idcouche=couche.idcouche
+and 
+debris.idcontrat=contartA.idcontrat
+and 
+assureur.idassureur=constratA.idssureur
+and 
+nom_couche='stratoshpère'
+and 
+nom_assur <> 'LLIYOD'
+
+
+)
